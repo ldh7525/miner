@@ -6,4 +6,6 @@ public class OreData : ScriptableObject
     public Sprite sprite;
     public string oreName;
     public Vector2Int appearFloorRange;
+    public int oreHealth;
+
 }

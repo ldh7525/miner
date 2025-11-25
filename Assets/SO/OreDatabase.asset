@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: OreDatabase
   m_EditorClassIdentifier: 
   ores:
-  - {fileID: 11400000, guid: c651518c928e71b47b210793a5bd9489, type: 2}
-  - {fileID: 11400000, guid: 973fd62deae868e4d971af6243296980, type: 2}
+  - {fileID: 11400000, guid: 2d2927e3c06aa5245b58133b6e305381, type: 2}
+  - {fileID: 11400000, guid: 15aaa1296e4976d478301e02118ffde9, type: 2}
   - {fileID: 11400000, guid: 8eebbb06e22c06d49b891c31a03c6635, type: 2}
-  - {fileID: 11400000, guid: 310459040e098524386ac6cdae56a147, type: 2}

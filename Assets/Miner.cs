@@ -16,31 +16,22 @@ public class Miner : MonoBehaviour
         UpdateProgressBar();
     }
 
-    public void Init()
-    {
-        TurnManager.Instance.OnMiningTurnEnter += OnEnterMiningTurn;
-    }
-
-    public void OnEnterMiningTurn()
-    {
-        currentFloorOres = FloorStateManager.Instance.GetCurrentFloorOres();
-    }
 
     private void Mine()
     {
         mineProgress += mineSpeed * Time.deltaTime;
         if (mineProgress >= 1f)
         {
-
+            GetOre();  
             mineProgress = 0f;
         }
 
     }
 
     // ÀÏ´Ü ·£´ý
-    private void DropOre()
+    private void GetOre()
     {
-        GameManager.Instance.inventory.
+       
     }
 
     public void UpdateProgressBar()

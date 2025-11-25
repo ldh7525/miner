@@ -2,18 +2,21 @@ using UnityEngine;
 
 public class FloorStateManager : Singleton<FloorStateManager>
 {
-    [SerializeField] private OreDatabase database;
+    public int currentFloor { get; private set; }
 
-    public int currentFloor;
-
-    // ¸¶ÀÌ´× ÅÏÀ¸·Î ¹Ù²ð ¶§
-    private void EnterMining()
+    protected override void Awake()
     {
-
+        base.Awake();
+        currentFloor = 1;
     }
 
-    public OreData[] GetCurrentFloorOres()
+    private void Start()
     {
-        return database.GetOreListByFloor(currentFloor);
+        GameManager.Instance.sceneTransitionManager.OnMiningTurnEnter += IncreaseFloor;
+    }
+
+    private void IncreaseFloor()
+    {
+        currentFloor++;
     }
 }
